@@ -1,0 +1,11 @@
+.story {
+  &__pictures {
+    background-color: rgb(202, 33, 33);
+    grid-column: full-st / col-end 4;
+  }
+
+  &__content {
+    background-color: rgb(5, 80, 17);
+    grid-column: col-end 4 / full-end;
+  }
+}
