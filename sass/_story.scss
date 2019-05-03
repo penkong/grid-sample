@@ -1,11 +1,51 @@
 .story {
   &__pictures {
-    background-color: rgb(202, 33, 33);
+    background-color: white;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.5),
+        rgba($color-primary, 0.5)
+      ),
+      url("../img/back.jpg");
     grid-column: full-st / col-end 4;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+  }
+
+  &__img--1 {
+    width: 100%;
+    grid-row: 2/6;
+    grid-column: 2/6;
+    box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.15);
+  }
+
+  &__img--2 {
+    width: 118%;
+    z-index: 20;
+    grid-row: 4/6;
+    grid-column: 4/7;
+    box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.15);
   }
 
   &__content {
-    background-color: rgb(5, 80, 17);
+    background-color: white;
     grid-column: col-end 4 / full-end;
+
+    padding: 6rem 7vw;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: flex-start;
+    display: grid;
+    align-content: center;
+    justify-items: start;
+  }
+
+  &__text {
+    font-size: 1.5rem;
+    margin-bottom: 4rem;
+    font-style: italic;
   }
 }
